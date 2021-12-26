@@ -6,6 +6,7 @@ body {
   letter-spacing: 1;
   word-break: break-all;
   color: #888;
+  font-family: "YuGothic", "游ゴシック体";
 }
 
 a {
@@ -20,6 +21,7 @@ li {
 header {
   width: 100%;
   display: inline-block;
+  background-color: rgb(022 064 152);
 }
 
 header .logo {
@@ -45,7 +47,7 @@ header .navbar ul li {
 }
 
 header .navbar ul li a {
-  color: #555;
+  color: white;
   font-weight: bold;
   font-size: 15px;
 }
@@ -72,7 +74,22 @@ header .drawer {
 
 .top {
   text-align: center;
-  margin: 150px 0 50px 0;
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 150px;
+}
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 125vh;
+  background: linear-gradient(rgb(022 064 152), rgb(104 198 223));
+  overflow: hidden;
+  transform: skewY(-7deg) translateY(-90px);
+  z-index: -1;
 }
 
 .top .inner {
@@ -89,14 +106,14 @@ header .drawer {
 }
 
 .font1 p {
-  color: #75a9ff;
+  color: white;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 25px;
 }
 
 .font1 small {
-  color: #666;
+  color: white;
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 25px;
@@ -137,7 +154,7 @@ header .drawer {
 
 .feature {
   width: 80%;
-  margin: 0 auto;
+  margin: 180px auto 100px;
 }
 
 .feature .inner {
@@ -171,17 +188,18 @@ header .drawer {
 .section {
   position: relative;
   padding: 150px 0;
+  height: auto;
 }
 
 .section::after {
   content: "";
   display: block;
   width: 100%;
-  height: 600px;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  background: linear-gradient(#75a9ff, #f5f6f7);
+  background: lightgray;
   z-index: 1;
 }
 
@@ -196,7 +214,7 @@ header .drawer {
 
 .font3 {
   font-size: 45px;
-  color: #fff;
+  color: dimgray;
   text-align: center;
   padding-bottom: 50px;
   line-height: 1.5;
@@ -212,7 +230,7 @@ header .drawer {
   border-radius: 30px;
   padding: 100px 20px;
   width: 85%;
-  margin: 0 auto;
+  margin: 10 auto;
 }
 
 .app_wrap {
@@ -372,7 +390,7 @@ p {
 
 .contact_btn .btn {
   text-align: center;
-  background: #ff82b2;
+  background: rgb(022 064 152);
   width: 17%;
   margin: 0 auto;
   padding: 10px 20px;
@@ -385,7 +403,7 @@ p {
 }
 
 footer {
-  background: #555;
+  background: rgb(022 064 152);
   padding: 50px 50px 20px;
 }
 
@@ -450,6 +468,9 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+  .top::before {
+    height: 60vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -540,6 +561,7 @@ footer {
   header .navbar ul li a {
     font: 18px;
     line-height: 2;
+    color: rgb(022 064 152);
   }
 
   body.nav-open header .drawer {
@@ -560,6 +582,14 @@ footer {
 }
 
 @media screen and (max-width: 540px) {
+  .header .navbar ul li a {
+  color: rgb(022 064 152);
+  }
+
+  .top::before {
+    height: 175vh;
+  }
+
   .faq .more {
     width: 30%;
   }
@@ -593,6 +623,13 @@ footer {
 
   header .drawer {
     margin: 0;
+  }
+
+  .header .navbar ul li a {
+  color: rgb(022 064 152);
+
+  .top::before {
+    height: 140vh;
   }
 
   .font1 p {
